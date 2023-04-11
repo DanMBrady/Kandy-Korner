@@ -1,0 +1,66 @@
+.customerContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+.customersDiv{
+    background: rgb(96, 44, 238);
+    color:white;
+    margin:20px;
+    height: 100px;
+    width:30%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 20px;
+    border:5px solid black;
+    font-weight: 600;
+}
+
+.customerSpace{
+    margin: 12px;
+}
+.customerLink{
+    color:white;
+    text-decoration: none;
+}
+
+.customerLink:hover{
+    color:rgb(159, 158, 158)
+}
+
+.customerName{
+    font-weight: 900;
+    font-size: larger;
+}
+
+.customerDetails{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    height:400px;
+    
+}
+
+.loyalty{
+    background: rgb(96, 44, 238);
+    color:white;
+    margin:20px;
+    height: 100px;
+    width:30%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 20px;
+    border:5px solid black;
+    font-weight: 600;
+}
+
+.loyaltyForm{
+    width:178px
+}

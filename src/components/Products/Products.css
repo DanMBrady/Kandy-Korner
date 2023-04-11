@@ -1,0 +1,103 @@
+.prodContainer{
+   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.products{
+    background: rgb(64, 215, 210);
+    border:3px solid black;
+    margin:10px;
+    padding: 5px;
+    color:black;
+    border-radius:20px;
+    height: 140px ;
+    display: flex;
+     width:30%;
+    padding-left: 20px;
+    
+}
+
+.prod{
+    width:50%
+}
+
+.prodButton{
+    width:50%;
+    display:flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.displayProducts{
+    padding: 2px;
+}
+
+.displayProductsH{
+    padding: 2px;
+    font-weight: 700;
+    font-size: larger;
+}
+
+.button{
+    margin:10px
+}
+
+.candySearch{
+    margin-top: 20px;
+}
+.candyContainer{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.candy{
+    background: rgb(70, 82, 255);
+    border:3px solid black;
+    margin:10px;
+    padding: 5px;
+    color:black;
+    border-radius:20px;
+    height: 100px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:20%;
+    padding-left: 20px;
+    color:white;
+}
+
+.cartButton{
+    margin-right: 20px;
+    margin-bottom: 10px;
+    background:black;
+    color:white
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.cartContainer{
+   
+    height:500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartBox{
+    background: rgb(34, 34, 165);
+    width:300px;
+    padding: 30px;
+    height:200px;
+    border-radius: 20px;
+    color:white;
+    border: 5px solid black;
+    
+    
+}

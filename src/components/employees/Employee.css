@@ -24,6 +24,13 @@
     
 }
 
+.singleEmployeeContainer{
+    display: flex;
+    height:500px;
+    justify-content: center;
+    align-items: center;
+}
+
 .employeeDiv{
 background: rgb(0, 145, 255);
 margin:20px;

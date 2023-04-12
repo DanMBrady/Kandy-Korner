@@ -1,8 +1,10 @@
 import { useEffect } from "react"
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 export const Employees =()=>{
     const [employees,setEmployees]=useState([])
+    const navigate = useNavigate()
 
     useEffect(
         () => {
@@ -15,15 +17,18 @@ export const Employees =()=>{
         [] 
     )
 
+
+
     return <article className="employeeContainer">
         {
             employees.map(employee=>{
-                return <article className="employeeDiv">
+                return <article className="employeeDiv" key ={employee.id}>
                     <article>Name: {employee?.user?.fullName}</article>
                     <article>Email: {employee?.user?.email}</article>
                     <article>Pay Rate: {employee.rate}</article>
                     <article>Address: {employee?.location?.address}</article>
                     <article>Start Date: {employee.startDate}</article>
+                    <button onClick ={ ()=>navigate(`/employees/${employee.id}`)}>Fire Employee</button>
                 </article>
             })
         }

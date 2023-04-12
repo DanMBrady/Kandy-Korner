@@ -7,7 +7,7 @@ import "./Employee.css"
 export const EmployeeForm =()=>{
 
     const [locations,setLocations] = useState([])
-    const [userId,setUserId] =useState([])
+   
     const navigate = useNavigate()
 
     const [product, update] =useState({
@@ -34,16 +34,7 @@ export const EmployeeForm =()=>{
         [] 
     )
 
-    useEffect(
-        () => {
-           fetch("http://localhost:8088/users")
-           .then(response => response.json())
-           .then((UserArray) => {
-            setUserId(UserArray.length + 1)
-           })
-        },
-        [] 
-    )
+   
 
     const handleSaveButtonClick = (event) => {
         event.preventDefault()
@@ -61,7 +52,7 @@ export const EmployeeForm =()=>{
             startDate: product.startDate,
             locationId:product.location,
             rate:parseInt(product.payRate),
-            userId:userId
+            
         }
         
         return fetch("http://localhost:8088/users", {
@@ -72,13 +63,16 @@ export const EmployeeForm =()=>{
             body:JSON.stringify(ticketToSendToAPIUser)
         })
         .then(response => response.json())
-        .then(fetch("http://localhost:8088/employees", {
-            method:"POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body:JSON.stringify(ticketToSendToAPIEmployee)
-        }))
+        .then((user)=>{
+            ticketToSendToAPIEmployee.userId=user.id
+            return fetch("http://localhost:8088/employees", {
+                method:"POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body:JSON.stringify(ticketToSendToAPIEmployee)
+        })
+        })
         .then(() =>{
             navigate("/employees")
         })
